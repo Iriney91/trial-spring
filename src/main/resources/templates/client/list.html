@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml"
+      >
+<head>
+    <title>Clients page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p>Clients:</p>
+
+<ul th:each="client : ${clients}">
+    <li>
+        <dl>
+            <dt>Client name</dt>
+            <dd th:text="${client.name}">Name</dd>
+            <dt>Client login</dt>
+            <dd th:text="${client.login}">Login</dd>
+        </dl>
+    </li>
+</ul>
+</body>
+</html>
